@@ -6,9 +6,9 @@ namespace VerzioKezelesHF_BertalanGergo
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Kérem adjon meg tíz számot.");
-
-			int darab = 10;
+			Console.WriteLine("Kérem adjon meg hogy hány számot kíván megadni.");
+            int darab = int.Parse(Console.ReadLine());
+			Console.WriteLine("És most adja meg a számokat:");
 			int[] tomb = new int[darab];
 			int osszeg = 0;
 			for (int i = 0; i < darab; i++)
@@ -16,7 +16,7 @@ namespace VerzioKezelesHF_BertalanGergo
 				tomb[i] = int.Parse(Console.ReadLine());
 				osszeg = osszeg + tomb[i];
 			}
-			Console.WriteLine("A tíz számnak az átlaga: {0}",osszeg/darab);
+			Console.WriteLine("A számok átlaga: {0}",osszeg/darab);
 		}
 	}
 }
