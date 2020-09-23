@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace VerzioKezelesHF_BertalanGergo
 {
@@ -11,12 +12,26 @@ namespace VerzioKezelesHF_BertalanGergo
 			Console.WriteLine("És most adja meg a számokat:");
 			int[] tomb = new int[darab];
 			int osszeg = 0;
+			
 			for (int i = 0; i < darab; i++)
 			{
 				tomb[i] = int.Parse(Console.ReadLine());
 				osszeg = osszeg + tomb[i];
 			}
 			Console.WriteLine("A számok átlaga: {0}",osszeg/darab);
+
+			int max = tomb[0];
+			for (int i = 0; i < darab; i++)
+			{
+				if (max < tomb[i])
+				{
+					max = tomb[i];
+				}
+			}
+			Console.WriteLine("Legnagyobb elem: {0}", max);
+
+
+			Console.ReadKey();
 		}
 	}
 }
