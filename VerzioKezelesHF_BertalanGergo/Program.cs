@@ -18,6 +18,7 @@ namespace VerzioKezelesHF_BertalanGergo
 				tomb[i] = int.Parse(Console.ReadLine());
 				osszeg = osszeg + tomb[i];
 			}
+			Console.WriteLine();
 			Console.WriteLine("A számok átlaga: {0}",osszeg/darab);
 
 			int max = tomb[0];
@@ -29,6 +30,16 @@ namespace VerzioKezelesHF_BertalanGergo
 				}
 			}
 			Console.WriteLine("Legnagyobb elem: {0}", max);
+
+			int min = tomb[0];
+			for (int i = 1; i < darab; i++)
+			{
+				if (min > tomb[i])
+				{
+					min = tomb[i];
+				}
+			}
+			Console.WriteLine("Legkisebb elem: {0}", min);
 
 
 			Console.ReadKey();
